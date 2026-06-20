@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="rlsgate — the Supabase deploy-gate that runs where you vibe-code" width="100%">
+</p>
+
 # rlsgate
 
 **The Supabase deploy-gate that runs where you vibe-code — and blocks only on the holes that are truly dangerous.**
