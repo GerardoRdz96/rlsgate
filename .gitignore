@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# envs
+.venv/
+venv/
+
+# NOTE: we intentionally do NOT ignore `.env` here — tests/fixtures/bad/.env is a
+# deliberate fake-secret fixture that the test suite scans.
+
+# OS
+.DS_Store

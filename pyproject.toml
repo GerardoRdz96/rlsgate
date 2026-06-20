@@ -1,0 +1,41 @@
+[project]
+name = "rlsgate"
+version = "0.1.0"
+description = "The pre-deploy gate for vibe-coded apps — catch the Supabase/RLS leak before your users do."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Penguin Alley", email = "hello@penguinalley.com" }]
+requires-python = ">=3.9"
+keywords = ["supabase", "rls", "security", "vibe-coding", "ci", "pre-deploy", "row-level-security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+# AI-drafted fix snippets are opt-in; the scanner is fully deterministic without them.
+ai = ["anthropic>=0.40"]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/GerardoRdz96/rlsgate"
+Source = "https://github.com/GerardoRdz96/rlsgate"
+
+[project.scripts]
+rlsgate = "rlsgate.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rlsgate"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
