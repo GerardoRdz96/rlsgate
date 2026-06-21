@@ -1,7 +1,7 @@
 [project]
 name = "rlsgate"
 version = "0.1.0"
-description = "The pre-deploy gate for vibe-coded apps — catch the Supabase/RLS leak before your users do."
+description = "The Supabase deploy-gate that runs where you vibe-code — block the RLS and secret leaks before deploy."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Penguin Alley", email = "hello@penguinalley.com" }]
@@ -35,6 +35,11 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/rlsgate"]
+
+[tool.hatch.build.targets.sdist]
+# Ship a clean source distribution — the package + docs only. The test fixtures include
+# deliberately-fake secret samples (a bad/.env) that have no business on PyPI.
+only-include = ["src/rlsgate", "README.md", "LICENSE", "skill"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
