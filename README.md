@@ -113,6 +113,10 @@ The skill runs the gate and brings the findings into the conversation so the age
 
 A clean `rlsgate` run means "none of the known high-signal holes are present," not "this app is secure."
 
+## Want your app checked by a person?
+
+`rlsgate` is free and stays free. If you shipped a vibe-coded app and want a professional pass before (or after) launch, we offer a fixed-fee security review at [Penguin Alley](https://penguinalley.com): we run the gate, go beyond it by hand, and leave you with the fixes applied and explained. Write to **hello@penguinalley.com**.
+
 ## License
 
 MIT © 2026 [Penguin Alley](https://penguinalley.com)
